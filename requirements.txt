@@ -1,0 +1,9 @@
+django
+djangorestframework
+django-nested-admin # We should replace it, when we create custom frontend for our app
+django-cors-headers
+freezegun  # FreezeGun is a library that allows your python tests to travel through time by mocking the datetime module.
+isort  # sorting imports
+django-debug-toolbar
+psycopg2
+flake8
