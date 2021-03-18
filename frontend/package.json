@@ -20,7 +20,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "postbuild": "rm -rf /var/www/build && mv build /var/www"
+    "postbuild": "mv build ../static/frontend"
   },
   "eslintConfig": {
     "extends": [

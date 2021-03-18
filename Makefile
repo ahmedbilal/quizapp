@@ -1,17 +1,18 @@
 .PHONY: frontend backend
 
 frontend:
-	cd frontend; \
+	cd frontend && \
 	npm start
 
 backend:
-	source venv/bin/activate; \
+	source venv/bin/activate && \
+	source ./.env && \
 	./manage.py runserver
 
 setup:
-	source venv/bin/activate; \
+	source venv/bin/activate && \
 	source ./.env && \
-	pip install -r requirements.txt; \
+	pip install -r requirements.txt && \
 	./manage.py migrate
 
 deploy: setup
@@ -19,5 +20,4 @@ deploy: setup
 	source ./.env && \
 	./manage.py collectstatic && \
 	cd frontend && \
-	npm run build && \
-	sudo systemctl restart nginx
+	npm run build
